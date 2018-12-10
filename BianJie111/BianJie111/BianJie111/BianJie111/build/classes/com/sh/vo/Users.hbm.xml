@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.sh.vo">
+	<class name="Users" table="users">
+		 <id name="u_id" type="java.lang.Integer">
+	         <generator class="native"/>
+	     </id>
+	     <property name="u_name" type="java.lang.String">
+	         <column name="u_name" length="50" not-null="true" />
+	     </property>
+	     <property name="u_pwd" type="java.lang.String">
+	         <column name="u_pwd" length="50" not-null="true" />
+	     </property>
+	     <property name="u_email" type="java.lang.String">
+	         <column name="u_email" length="50"  />
+	     </property>
+	     <property name="u_state" type="java.lang.Integer">
+	         <column name="u_state"  not-null="true" />
+	     </property>
+	     <property name="u_base64" type="java.lang.String">
+	         <column name="u_base64"  not-null="false" />
+	     </property>
+	     <property name="u_time">
+	         <column name="u_time" />
+	     </property>
+	        <property name="u_phone">
+	         <column name="u_phone" />
+	     </property>
+	        <property name="u_addr">
+	         <column name="u_addr" />
+	     </property>
+	        <property name="u_sex">
+	         <column name="u_sex" />
+	     </property>
+	     <set name="orders" inverse="true">
+            <key>
+                <column name="o_uid" not-null="true" />
+            </key>
+            <one-to-many class="Orders" />
+        </set>
+	     
+	</class>
+</hibernate-mapping>

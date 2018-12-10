@@ -1,0 +1,31 @@
+body{ 
+font-size:12px;
+margin-top:0px;
+}
+.menu{border-radius:30px; background-color:#bcb3b3;}
+.ma{ font-size:14px; color:#FFFFFF;}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+.border{ border:1px solid #2AA4D5;}
+.img{ border:1px solid #CCCCCC; padding:2px; float:left; margin-left:-80px; margin-top:4px;}
+.box_title{ background:url(images/title_bg.jpg) repeat-x;}
+.box2{ background:url(images/box_title.jpg) repeat-x;}
+.leftbg{ background:url(images/left.jpg) no-repeat;color:#FFFFFF;}
+.input{ width:120px; height:28px; }
+.right_box{ border:1px solid #CCCCCC;}
+.subject{ font-size:16px; font-weight:bold;}
+.index_info{ line-height:150%; text-align:left; text-indent:10px; padding-left:4px; padding-right:4px;}
+.content{ line-height:260%; font-size:14px;}
+.info{ width:700px; height:1px; border-bottom:1px solid #CCCCCC;}
+.passinfo{ width:200px; height:20px; border:1px solid #CCCCCC;}

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.sh.vo">
+	 <class name="Orders" table="orders">
+		 <id name="o_id" type="java.lang.Integer">
+	         <generator class="native"/>
+	     </id>
+	     <property name="o_stime" type="java.lang.String">
+	         <column name="o_stime" length="50" not-null="true" />
+	     </property>
+	     <property name="o_etime" type="java.lang.String">
+	         <column name="o_etime" length="50" not-null="true" />
+	     </property>
+	     
+	     <property name="o_idcard" type="java.lang.String">
+	         <column name="o_idcard"  not-null="true"/>
+	     </property>
+	     
+	      <property name="o_sex" type="java.lang.String">
+	         <column name="o_sex" not-null="true" />
+	     </property>
+	     
+	     <property name="o_name" type="java.lang.String">
+	         <column name="o_name" length="50" not-null="true" />
+	     </property>
+	     
+	     <property name="o_tel" type="java.lang.String">
+	         <column name="o_tel" length="50" not-null="true" />
+	     </property>
+	     
+	     <property name="o_state" type="java.lang.Integer">
+	         <column name="o_state"  not-null="true" />
+	     </property>
+	     
+	     <property name="o_time">
+	         <column name="o_time" />
+	     </property>
+	     
+	     <many-to-one name="users" class="Users" fetch="select" lazy="false">
+            <column name="o_uid" not-null="true" />
+         </many-to-one>
+         
+         <many-to-one name="rooms" class="Rooms" fetch="select" lazy="false">
+            <column name="o_rid" not-null="true" />
+         </many-to-one>
+     </class>
+</hibernate-mapping>

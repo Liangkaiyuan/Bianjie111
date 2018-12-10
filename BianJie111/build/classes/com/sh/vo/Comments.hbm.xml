@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.sh.vo">
+	 <class name="Comments" table="comments">
+		 <id name="c_id" type="java.lang.Integer">
+	         <generator class="native"/>
+	     </id>
+	     
+	     <property name="c_info" type="java.lang.String">
+	         <column name="c_info"  not-null="true" />
+	     </property>
+	     
+	     <property name="c_replay" type="java.lang.String">
+	         <column name="c_replay" />
+	     </property>
+	   
+	     <property name="c_time">
+	         <column name="c_time" />
+	     </property>
+	     
+	     <many-to-one name="users" class="Users" fetch="select" lazy="false">
+            <column name="c_uid" not-null="true" />
+         </many-to-one>
+       
+     </class>
+</hibernate-mapping>

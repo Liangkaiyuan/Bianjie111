@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+  <data-sources />
+  
+  <form-beans>
+  	<form-bean name="usersForm" type="com.sh.struts.form.UsersForm" />
+  	<form-bean name="roomsForm" type="com.sh.struts.form.RoomsForm" />
+  	<form-bean name="ordersForm" type="com.sh.struts.form.OrdersForm" />
+  	<form-bean name="commentsForm" type="com.sh.struts.form.CommentsForm" />
+  	<form-bean name="hotelForm" type="com.sh.struts.form.HotelForm" />
+  </form-beans>
+  
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings>
+  
+    <action
+      	attribute="usersForm"
+      	input="/login.jsp"
+      	name="usersForm"
+      	parameter="m"
+      	path="/users"
+      	scope="request"
+      	type="com.sh.struts.action.UsersAction" />
+    
+    <action
+      	attribute="roomsForm"
+      	input="/login.jsp"
+      	name="roomsForm"
+      	parameter="m"
+      	path="/rooms"
+      	scope="request"
+      	type="com.sh.struts.action.RoomsAction" />
+      	
+     <action
+      	attribute="ordersForm"
+      	input="/login.jsp"
+      	name="ordersForm"
+      	parameter="m"
+      	path="/orders"
+      	scope="request"
+      	type="com.sh.struts.action.OrdersAction" />
+     
+     <action
+      	attribute="commentsForm"
+      	input="/login.jsp"
+      	name="commentsForm"
+      	parameter="m"
+      	path="/comments"
+      	scope="request"
+      	type="com.sh.struts.action.CommentsAction" />
+     
+      <action
+      	attribute="hotelForm"
+      	input="/login.jsp"
+      	name="hotelForm"
+      	parameter="m"
+      	path="/hotel"
+      	scope="request"
+      	type="com.sh.struts.action.HotelAction" />
+ 
+  </action-mappings>
+  <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
+</struts-config>
+

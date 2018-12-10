@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>艺术家</title>
+
+  <meta charset="utf-8">
+  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="">
+
+  <!-- Google Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,600,700%7CSource+Sans+Pro:400,600,700' rel='stylesheet'>
+
+  <!-- Css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/font-icons.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+  <!-- Lazyload (must be placed in head in order to work) -->
+  <script src="js/lazysizes.min.js"></script>
+
+</head>
+
+<body class="style-default style-rounded">
+
+  
+
+  <!-- Bg Overlay -->
+  <div class="content-overlay"></div>
+
+  <!-- Sidenav -->    
+  <header class="sidenav" id="sidenav">
+
+    <!-- close -->
+    <div class="sidenav__close">
+      <button class="sidenav__close-button" id="sidenav__close-button" aria-label="close sidenav">
+        <i class="ui-close sidenav__close-icon"></i>
+      </button>
+    </div>
+    
+    <!-- Nav -->
+    <nav class="sidenav__menu-container">
+      <ul class="sidenav__menu" role="menubar">
+        <li>
+          <a href="index.jsp" class="sidenav__menu-url">首页</a>
+        
+         
+        </li>
+        <li>
+          <a href="#" class="sidenav__menu-url">艺术馆展览</a>
+          <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i class="ui-arrow-down"></i></button>
+          <ul class="sidenav__menu-dropdown">
+           
+										    <li><a href="huodongzongye.html" class="sidenav__menu-url">当前展览</a></li>
+											<li><a href="zhanlanhuigu.html" class="sidenav__menu-url">展览回顾</a></li>
+											<li><a href="zhanlanyugao.html" class="sidenav__menu-url">展览预告</a></li>
+											<li><a href="RoomShow.html" class="sidenav__menu-url">3D画廊</a></li>
+											
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        
+        <li>
+          <a href="#" class="sidenav__menu-url">住宿与用户专栏</a>
+          <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i class="ui-arrow-down"></i></button>
+          <ul class="sidenav__menu-dropdown">
+          	<li><a href="bianjieyisu.jsp" class="sidenav__menu-url">艺宿客房</a></li>
+											<li><a href="<%=request.getContextPath() %>/rooms.do?m=list"  class="sidenav__menu-url">客房预定</a></li>
+											<li><a href="<%=request.getContextPath() %>/orders.do?m=list"  class="sidenav__menu-url">我的客房订单</a></li>											
+											<li><a href="<%=request.getContextPath() %>/comments.do?m=list"  class="sidenav__menu-url">在线留言</a></li>		
+            <li>
+              <a href="#" class="sidenav__menu-url">(刷脸功能)用户登录与注册</a>
+              <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i class="ui-arrow-down"></i></button>
+              <ul class="sidenav__menu-dropdown">
+              		<li><a href="users_login.jsp" class="sidenav__menu-url">用户登录注册</a></li>
+              		<li><a href="users_login.jsp" class="sidenav__menu-url">普通用户登录</a></li>
+									<li><a href="face_reg.jsp" class="sidenav__menu-url">管理员人脸注册</a></li>
+									<li><a href="facelogin.jsp" class="sidenav__menu-url">管理员人脸登录</a></li>
+									<li><a href="admin/users_login.jsp" class="sidenav__menu-url">管理员密码登录</a></li>
+               
+              </ul>
+            </li>
+            
+          </ul>
+        </li>        
+
+        <!-- Categories -->
+        <li><a href="<%=request.getContextPath() %>/rooms.do?m=list" class="sidenav__menu-url">客房预定</a></li>
+											<li><a href="<%=request.getContextPath() %>/orders.do?m=list" class="sidenav__menu-url">我的客房订单</a></li>											
+											<li><a href="<%=request.getContextPath() %>/comments.do?m=list" class="sidenav__menu-url">在线留言</a></li>		
+      
+      </ul>
+    </nav>
+
+    <div class="socials sidenav__socials"> 
+      
+    </div>
+  </header> <!-- end sidenav -->
+
+  <main class="main oh" id="main">
+
+    <!-- Top Bar -->
+    <div class="top-bar d-none d-lg-block">
+      <div class="container">
+        <div class="row">
+
+          <!-- Top menu -->
+          <div class="col-lg-6">
+            <ul class="top-menu">
+            <li><a>联系与预定电话：0635——8418899，13562050460</a></li>
+             
+                          
+            </ul>
+          </div>
+          
+          <!-- Socials -->
+          <div class="col-lg-6">
+            <div class="socials nav__socials socials--nobase socials--white justify-content-end"> 
+             
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div> <!-- end top bar -->        
+
+    <!-- Navigation -->
+    <header class="nav">
+
+      <div class="nav__holder nav--sticky">
+        <div class="container relative">
+          <div class="flex-parent">
+
+            <!-- Side Menu Button -->
+            <button class="nav-icon-toggle" id="nav-icon-toggle" aria-label="Open side menu">
+              <span class="nav-icon-toggle__box">
+                <span class="nav-icon-toggle__inner"></span>
+              </span>
+            </button> 
+
+            <!-- Logo -->
+            <a href="index.jsp" class="logo">
+              <img class="logo__img" src="img/logo_default.png" srcset="img/logo_default.png 1x, img/logo_default@2x.png 2x" alt="logo">
+            </a>
+
+            <nav class="flex-child nav__wrap d-none d-lg-block">
+								<ul class="nav__menu">
+
+									<li>
+										<a href="index.jsp">首页</a>
+									</li>
+									<li class="nav__dropdown">
+										<a href="#">艺术馆展览</a>
+										<ul class="nav__dropdown-menu">    
+										    <li><a href="huodongzongye.html">当前展览</a></li>
+											<li><a href="zhanlanhuigu.html">展览回顾</a></li>
+											<li><a href="zhanlanyugao.html">展览预告</a></li>
+											<li><a href="RoomShow.html">3D画廊</a></li>
+											
+										</ul>
+									</li>
+
+              <li class="nav__dropdown">
+										<a href="#">边界艺宿</a>
+										<ul class="nav__dropdown-menu">	  
+										    
+																						    									
+											<li><a href="bianjieyisu.jsp">艺宿客房</a></li>
+											<li><a href="<%=request.getContextPath() %>/rooms.do?m=list" class="ma">客房预定</a></li>
+											<li><a href="<%=request.getContextPath() %>/orders.do?m=list" class="ma">我的客房订单</a></li>											
+											<li><a href="<%=request.getContextPath() %>/comments.do?m=list" class="ma"">在线留言</a></li>												
+										</ul>
+									</li>
+									
+									<li class="nav__dropdown">
+										<a href="#">参观服务</a>
+										<ul class="nav__dropdown-menu">	  
+										    
+																						    									
+											<li><a href="canguanzhinan.html">参观指南</a></li>
+											<li><a href="contact us.html">申办展览</a></li>
+											<li><a href="contact us.html">联系我们</a></li>
+											<li><a href="about_us.html">问题咨询</a></li>
+											<li><a href="travel_around.html">周边旅游</a></li>
+											
+																						
+										</ul>
+									</li>
+									
+									
+									
+									<li class="nav__dropdown">
+										<a href="#a">新闻资讯</a>
+										<ul class="nav__dropdown-menu">
+										<li><a href="about4.html">通知公告</a></li>
+                                        <li><a href="huodongzongye.html">活动信息</a></li>
+                                               <li class="nav__dropdown">
+                                        <a href="huodongzongye.html">在建项目</a>
+                                               <ul class="nav__dropdown-menu">
+													<li><a href="404.html">边界文化课题研究</a></li>
+													<li><a href="404.html">读书分享</a></li>
+													<li><a href="404.html">公共艺术教育</a></li>
+													<li><a href="404.html">沙龙研讨</a></li>
+													<li><a href="404.html">艺术衍生品</a></li>								
+											   </ul>                                       
+										</ul>
+									</li>
+									
+									<li class="nav__dropdown">
+										<a href="#">支持我们</a>
+										<ul class="nav__dropdown-menu">
+											<li><a href="about1.html">成为会员</a></li>
+											<li><a href="joinus.html">加入我们</a></li>
+											<li><a href="contact us.html">活动赞助</a></li>
+											<li><a href="contact us.html">作品捐赠</a></li>
+												<li><a href="about2.html">捐赠艺术家名录</a></li>																																																																												
+										</ul>
+									</li>
+									<li class="nav__dropdown">
+										<a href="#">用户登录信息</a>
+										<ul class="nav__dropdown-menu">
+										<li><a href="users_login.jsp">用户登录注册</a></li>	
+											<li class="nav__dropdown">
+											<a href="facelogin.jsp">(火狐)人脸识别登录后台</a>
+												<ul class="nav__dropdown-menu">
+													<li><a href="users_login.jsp">普通用户登录</a></li>
+													<li><a href="face_reg.jsp">(火狐)管理员人脸注册</a></li>
+													<li><a href="facelogin.jsp">(火狐)管理员人脸登录</a></li>
+													<li><a href="admin/users_login.jsp" class="ma">管理员密码登录</a></li>
+																								
+												</ul>
+											<li><a href="admin/users_login.jsp">后台管理</a></li>
+											 <li><a href="<%=request.getContextPath() %>/comments.do?m=list" class="ma"">在线留言</a></li>																					
+										</li>
+									
+									
+                                  
+
+								</ul>
+								<!-- end menu -->
+							</nav>
+							<!-- end nav-wrap -->
+
+            <!-- Nav Right -->
+            <div class="nav__right">
+
+              <!-- Search -->
+              <div class="nav__right-item nav__search">
+                <a href="#" class="nav__search-trigger" id="nav__search-trigger">
+                  <i class="ui-search nav__search-trigger-icon"></i>
+                </a>
+                <div class="nav__search-box" id="nav__search-box">
+                  <form class="nav__search-form">
+                    <input type="text" placeholder="点击查询" class="nav__search-input">
+                    <button type="submit" class="search-button btn btn-lg btn-color btn-button">
+                      <i class="ui-search nav__search-icon"></i>
+                    </button>
+                  </form>
+                </div>                
+              </div>             
+
+            </div> <!-- end nav right -->            
+        
+          </div> <!-- end flex-parent -->
+        </div> <!-- end container -->
+
+      </div>
+    </header> <!-- end navigation -->
+    <div class="container">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a href="index.jsp" class="breadcrumbs__url">首页</a>
+        </li>
+        
+        <li class="breadcrumbs__item breadcrumbs__item--current">
+         加入我们
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-container container" id="main-container">            
+      <!-- post content -->
+      
+      <div class="blog__content mb-72" style="text-align: center;">
+        <h1 >加入我们<br />&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+        
+      </div> 
+      
+      
+         
+     
+														<p><strong>【志愿者招聘计划】&【实习生计划】</strong></p>
+														<p><br/></p>
+														<p><strong>【招募信息】</strong></p>
+														<p>1、时间：2018年8月-10月（部分志愿者提前上岗）</p>
+														<p>2、地点：边界美术馆（聊城市东昌府区南大街）</p>
+														<p>3、性质：志愿服务&</p>
+														<p><br/></p>
+														<p><strong>【志愿者服务内容】</strong></p>
+														<p><strong>（一）基础岗位</strong>&nbsp;&nbsp;&nbsp;&nbsp;展厅及观众服务：展览咨询、接待及动线引导、检票、展厅作品看顾、票务中心服务。</p>
+														<p><strong>（二）导览岗位</strong>&nbsp;&nbsp;&nbsp;&nbsp;导览员：志愿者掌握所有当期展览信息，为观众介绍整个展厅的展品内容。</p>
+														<p><strong>（三）特殊岗位</strong>&nbsp;&nbsp;&nbsp;&nbsp;需参与基础岗位后，根据美术馆需求进行内部招募如摄影、翻译、活动策划等工作岗位。</p>
+														<p><br/></p>
+														<p><strong>【招聘要求】</strong></p>
+														<p>1.热爱艺术,对公共文化充满兴趣和热情,有艺术文化类大型活动有实习经验者优先；</p>
+														<p>2.乐于为他人服务,性格开朗，责任心强,对新事物有较强学习能力；</p>
+													    <p>3.良好的人际沟通技巧,较强的理解能力,优秀的团队合作精神和责任心；</p>
+													    <p>4.形象气质佳，具有较好的语言沟通能力，能够进行较为流程的英语交流；</p>
+													    <p>5.部分岗位需自带笔记本电脑；</p>
+													    <p>6.保证周一到周五全天上班，或可接受早班7:30或晚班22;30工作安排；</p>
+														<p><br/></p>
+														<p><strong>如果您符合以上条件，请在简历中尽量体现！</strong></p>
+														<p><strong>申请方式：</strong>&nbsp;&nbsp;&nbsp;&nbsp;有意者请将简历发至12345678@qq.com并在邮件标题中注明志愿者或实习生。</p>
+														<p><strong>注：由于应聘者众多，不能及时回复，敬请谅解</strong></p>
+														<p><br/></p>
+														<p><strong>【面试、培训及岗位具体安排计划】</strong></p>
+														<p><strong>1、面试时间</strong>：2018年9月23日－10月1日（具体时间另行通知）</p>
+														<p><strong>2、培训内容：</strong></p>
+														<p>（1）基础培训：志愿者服务理念、美术馆介绍等</p>
+														<p>（2）岗位培训：岗位细则培训包括岗位基本情况、工作内容、工作流程等。</p>
+														<p>（3）展览培训：当期展览相关内容。</p>
+														<p>（4）美术馆场馆培训：包括工作岗位基本情况、现场模拟等。</p>
+														<p><br/></p>
+														<p><strong>安排上岗：</strong></p>
+														<p>培训完毕后，公教部安排志愿者的岗位及具体服务时间，本着尊重志愿者意愿与本期展览工作需求相结合的原则来安排。</p>
+													
+      <!-- end post content -->
+    </div> <!-- end main container -->
+
+    <div id="back-to-top">
+      <a href="#top" aria-label="Go to top"><i class="ui-arrow-up"></i></a>
+    </div>
+
+  </main> <!-- end main-wrapper -->
+
+  
+  <!-- jQuery Scripts -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/easing.min.js"></script>
+  <script src="js/owl-carousel.min.js"></script>
+  <script src="js/flickity.pkgd.min.js"></script>
+  <script src="js/twitterFetcher_min.js"></script>
+  <script src="js/jquery.newsTicker.min.js"></script>  
+  <script src="js/modernizr.min.js"></script>
+  <script src="js/scripts.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.sh.vo">
+	 <class name="Rooms" table="rooms">
+		 <id name="r_id" type="java.lang.Integer">
+	         <generator class="native"/>
+	     </id>
+	     <property name="r_name" type="java.lang.String">
+	         <column name="r_name" length="50" not-null="true" />
+	     </property>
+	     <property name="r_price" type="java.lang.Double">
+	         <column name="r_price" length="50" not-null="true" />
+	     </property>
+	     
+	     <property name="r_img" type="java.lang.String">
+	         <column name="r_img" length="150" not-null="true" />
+	     </property>
+	     
+	     <property name="r_bed" type="java.lang.String">
+	         <column name="r_bed" length="100" default="''"/>
+	     </property>
+	     
+	      <property name="r_zc" type="java.lang.String">
+	         <column name="r_zc" length="100" default="''"/>
+	     </property>
+	     
+	      <property name="r_web" type="java.lang.String">
+	         <column name="r_web" length="100" default="''"/>
+	     </property>
+	     
+	     <property name="r_info" type="java.lang.String">
+	         <column name="r_info" length="2000" default="''"/>
+	     </property>
+	     
+	      <property name="r_time">
+	         <column name="r_time" />
+	     </property>
+	     
+	     <set name="orders" inverse="true">
+            <key>
+                <column name="o_rid" not-null="true" />
+            </key>
+            <one-to-many class="Orders" />
+        </set>
+     </class>
+</hibernate-mapping>

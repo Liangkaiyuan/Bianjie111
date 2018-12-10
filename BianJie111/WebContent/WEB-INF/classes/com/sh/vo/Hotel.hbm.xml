@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.sh.vo">
+	 <class name="Hotel" table="hotel">
+		 <id name="h_id" type="java.lang.Integer">
+	         <generator class="native"/>
+	     </id>
+	     
+	     <property name="h_name" type="java.lang.String">
+	         <column name="h_name"  not-null="true" />
+	     </property>
+	     
+	     <property name="h_info" type="java.lang.String">
+	         <column name="h_info"  not-null="true" />
+	     </property>
+	     
+	     <property name="h_tel" type="java.lang.String">
+	         <column name="h_tel" not-null="true" />
+	     </property>
+	     
+	     <property name="h_email" type="java.lang.String">
+	         <column name="h_email" />
+	     </property>
+	     
+	     <property name="h_address" type="java.lang.String">
+	         <column name="h_address" not-null="true" />
+	     </property>
+	     
+	     <property name="h_img" type="java.lang.String">
+	         <column name="h_img" not-null="true" />
+	     </property>
+
+     </class>
+</hibernate-mapping>
